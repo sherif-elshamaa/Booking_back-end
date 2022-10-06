@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 
 const HotelSchema = new mongoose.Schema({
-
+    hotelId:{
+        type: mongoose.Schema.Types.ObjectId,
+    },
     name:{
         type: String,
         require: true,
@@ -23,11 +25,9 @@ const HotelSchema = new mongoose.Schema({
     },
     title:{
         type: String,
-        required: true
     },
     desc:{
         type: String,
-        required: true
     },
     rating:{
         type: Number,
@@ -36,18 +36,15 @@ const HotelSchema = new mongoose.Schema({
     },
     distance: {
         type: String,
-        required: true,
     },
     rooms: {
         type: [String],
     },
     cheapestPrice:{
         type: Number,
-        rquired : true,
     },
     featured: {
         type: Boolean,
-        default : false
     },
     
 
